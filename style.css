@@ -1,0 +1,39 @@
+h1 {
+background-color: #1aff1a;
+height: 200px;
+text-align: center;
+font-size: 30;
+}
+
+h2{
+  color: black;
+}
+
+h3{
+  line-height: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h4{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+div{
+  width: 500px;
+}
+
+#bio{
+float:right;
+
+}
+#goals{
+float:left;
+}
+
+.degree{
+margin-top: 0px;
+margin-bottom: 0px;
+
+}
