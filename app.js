@@ -34,3 +34,17 @@ else{
 
 var answer5 = prompt('Does Alison own a bicycle?').toLowerCase();if(answer5 === 'yes' || answer5 === 'y'){
   alert ('Incorrect -kind of! Trick question! She actually owns 2');}else{alert ('Correct She owns two bicycles that she loves equally.');}
+
+var counterNumber = 0;
+while(counter < 5) {
+  var numberAnswer = prompt ('Guess what number Alison is thinking');
+  { if(numberAnswer === '16'){
+  alert('correct'); counterNumber = 5;
+  }
+  else if (numberAnswer > 16) {
+  alert('Too high!'); counterNumber++}
+  else {
+  alert('Too Low!'); counterNumber++;
+  }
+}
+}
