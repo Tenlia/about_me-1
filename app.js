@@ -14,7 +14,7 @@ function question1(){
     alert('Incorrect, Alison spent several wintery months almost freezing to death in Siberia.');
   }
 };
-question1(answer1);
+question1();
 
 //Liz has altered this question to be a function
 var answer2 = prompt('Has Alison ever been to the Amazon?').toLowerCase();
@@ -27,7 +27,7 @@ function question2(){
     alert('Nope! Alison spent 3 months in the Peruvian Amazon working with Iquito elders on documenting their language');
   }
 };
-question2(answer2);
+question2();
 
 //Liz has altered this question to be a function
 var answer3 = prompt('Has Alison ever been to the Serengeti?').toLowerCase();
@@ -40,7 +40,7 @@ function question3(){
     alert('No way! Alison has never been to Africa, but is dying to go!');
   }
 };
-question3(answer3);
+question3();
 
 //Liz has alter this question to be a function
 var answer4 = prompt('Has Alison ever harvested cranberries?').toLowerCase();
@@ -52,7 +52,7 @@ function question4(){
   else{
     alert('Incorrect! Alison managed an organic cranberry farm in Cape Cod for 5 years and can no longer stand the taste of cranberry juice!');}
 };
-question4(answer4);
+question4();
 
 //Liz has changed this question to be a function
 var answer5 = prompt('Does Alison own a bicycle?').toLowerCase();
@@ -63,43 +63,52 @@ function question5(){
     tally++;
   }
 };
-question5(answer5);
+question5();
 
-var counterNumber = 0;
-while(counterNumber < 5) {
-  var numberAnswer = prompt ('Guess what number Alison is thinking');
-  if(numberAnswer === '16'){
-    alert('correct');
-    counterNumber = 5;
-    tally++;
+//Liz turned this question into a function
+function question6(){
+  var counterNumber = 0;
+  while(counterNumber < 5) {
+    var numberAnswer = prompt ('Guess what number Alison is thinking');
+    if(numberAnswer === '16'){
+      alert('correct');
+      counterNumber = 5;
+      tally++;
+    }
+    else if (numberAnswer > 16) {
+      alert('Too high!');
+      counterNumber++;
+    }
+    else {
+      alert('Too Low!');
+      counterNumber++;
+    }
   }
-  else if (numberAnswer > 16) {
-    alert('Too high!');
-    counterNumber++;
-  }
-  else {
-    alert('Too Low!');
-    counterNumber++;
-  }
-}
+};
+question6();
 
+//Liz has changed this question into a function
 //fixed the "keep guessing" to not come up everytime and the tally to come up after the question is done
 var myStates = ['pa','or','va','ca','ma'];
 var counterStates = 0;
-while (counterStates < 6){
-  var answerStates = prompt('Name a state that Alison has lived in. In 2 letter acronyms please').toLowerCase();
-  for (var i = 0; i < myStates.length; i++){
-    if(answerStates === myStates[i]){
-      var correctAnswer = 1;
-      counterStates = 7;
-      alert('You are correct!');
-      tally++;
-      break;
+function question7(){
+  while (counterStates < 6){
+    var answerStates = prompt('Name a state that Alison has lived in. In 2 letter acronyms please').toLowerCase();
+    for (var i = 0; i < myStates.length; i++){
+      if(answerStates === myStates[i]){
+        var correctAnswer = 1;
+        counterStates = 7;
+        alert('You are correct!');
+        tally++;
+        break;
+      }
+    }
+    if(counterStates < 6){
+      alert('Keep guessing!');
+      counterStates++;
     }
   }
-  if(counterStates < 6){
-    alert('Keep guessing!');
-    counterStates++;
-  }
-}
+};
+question7();
+
 alert('You got' + ' ' + tally + '' + 'out of 7 correct,' + ' ' + userName + '.' );
