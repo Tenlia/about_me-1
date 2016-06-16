@@ -83,6 +83,7 @@ while(counterNumber < 5) {
   }
 }
 
+//fixed the "keep guessing" to not come up everytime and the tally to come up after the question is done
 var myStates = ['pa','or','va','ca','ma'];
 var counterStates = 0;
 while (counterStates < 6){
