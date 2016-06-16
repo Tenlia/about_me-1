@@ -91,15 +91,14 @@ while (counterStates < 6){
     if(answerStates === myStates[i]){
       var correctAnswer = 1;
       counterStates = 7;
+      alert('You are correct!');
       tally++;
       break;
     }
   }
-  if(correctAnswer === 1){
-    alert('You are correct!');
-  }else{
+  if(counterStates < 6){
     alert('Keep guessing!');
     counterStates++;
   }
-  alert('You got' + ' ' + tally + '' + 'out of 7 correct,' + ' ' + userName + '.' );
 }
+alert('You got' + ' ' + tally + '' + 'out of 7 correct,' + ' ' + userName + '.' );
